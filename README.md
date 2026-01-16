@@ -25,9 +25,7 @@
 
 ---
 
-| **Main Interface** | **Detailed Stats** |
-|:---:|:---:|
-| <img src="popup.png" alt="Main Popup Interface" width="350"/> | <img src="stats.png" alt="Statistics View" width="350"/> |
+
 
 ## 🌟 Overview
 
