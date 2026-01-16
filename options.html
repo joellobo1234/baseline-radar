@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baseline Inspector History</title>
+    <link rel="stylesheet" href="options.css">
+    <style>
+        /* Quick reset for main structure if css load fails */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background: #f3f4f6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="icons/baseline-wordmark.svg" alt="Baseline" style="height: 24px;">
+                </div>
+                <h1>Analysis History</h1>
+            </div>
+            <div class="actions">
+                <button id="exportSelectedBtn" class="btn btn-primary" disabled>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7,10 12,15 17,10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Export ZIP
+                </button>
+                <button id="deleteSelectedBtn" class="btn btn-danger" disabled>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="3 6 5 6 21 6"></polyline>
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                    </svg>
+                    Delete
+                </button>
+            </div>
+        </header>
+
+        <div class="controls-bar">
+            <div class="search-box">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="searchInput" placeholder="Search by URL...">
+            </div>
+            <div class="date-filter">
+                <input type="date" id="dateInput">
+            </div>
+        </div>
+
+        <div class="table-container" id="tableView">
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th width="40"><input type="checkbox" id="selectAll"></th>
+                        <th>Date</th>
+                        <th>URL</th>
+                        <th>Features</th>
+                        <th>Status Summary</th>
+                        <th width="80">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="historyList">
+                    <!-- Javascript will populate this -->
+                </tbody>
+            </table>
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <p>No analysis history found.</p>
+            </div>
+        </div>
+
+        <!-- Detail View (Hidden by default) -->
+        <div id="detailView" class="detail-view" style="display: none;">
+            <div class="detail-header">
+                <button id="backBtn" class="btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5" />
+                        <path d="M12 19l-7-7 7-7" />
+                    </svg>
+                    Back to History
+                </button>
+                <div class="detail-meta">
+                    <h2 id="detailUrl"></h2>
+                    <span id="detailDate"></span>
+                </div>
+            </div>
+
+            <div class="detail-stats" id="detailStats">
+                <!-- Stats will go here -->
+            </div>
+
+            <div class="detail-content">
+                <div class="detail-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="css">CSS</button>
+                    <button class="filter-btn" data-filter="js">JavaScript</button>
+                    <button class="filter-btn" data-filter="html">HTML</button>
+                </div>
+                <div id="detailFeatureList" class="feature-grid">
+                    <!-- Features rendered here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="libs/jszip.min.js"></script>
+    <script src="options.js"></script>
+</body>
+
+</html>

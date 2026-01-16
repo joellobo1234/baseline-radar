@@ -1,228 +1,64 @@
-#🔍 Baseline Inspector
+# Baseline Radar 📡
 
-A powerful Chrome extension that analyzes web pages for browser compatibility using the Web Platform Baseline standard.
-![EXTENSION ICON](icons/icon128.png)
+![Baseline Radar Logo](icons/baseline-logo.png)
 
-##🎯 What is Baseline Inspector?
+**Baseline Radar** (formerly Baseline Inspector) is a powerful Chrome extension that helps developers and QA engineers analyze web pages for browser compatibility status. It scans the current page's HTML, CSS, and JavaScript usage and validates it against the official [Web Platform Baseline](https://web.dev/baseline/) data.
 
-Baseline Inspector helps developers instantly identify which CSS, HTML, and JavaScript features are Widely Available, Newly Available, or have Limited Support across browsers. Stop guessing about browser compatibility—get instant insights directly on the page!
+## 🚀 Features
 
-##✨ Features
+-   **Deep Page Analysis**: Scans the DOM, stylesheets, and scripts to identify used web platform features.
+-   **Baseline Categorization**: detailed breakdown of features into three categories:
+    -   🟢 **Widely Available**: Safe to use across all major browsers (Baseline High).
+    -   🟡 **Newly Available**: Interoperable across major browsers but relatively new (Baseline Low).
+    -   🔴 **Limited**: Experimental or legacy features with limited support.
+-   **Interactive Dashboard**: View a history of your analyses and verify site health over time.
+-   **Detailed Insights**: Click on any detected feature to see specific browser support details (Chrome, Firefox, Safari, Edge).
+-   **Filter & Search**: Quickly filter results by technology (HTML, CSS, JS) or Status.
+-   **Export Reports**: Download analysis results as JSON for further processing or reporting.
+-   **Auto-Sync**: Automatically fetches the latest [web-features](https://github.com/web-platform-dx/web-features) data weekly to keep your compatibility checks up-to-date.
 
--🎨 Real-time CSS, HTML & JS Analysis - Scans stylesheets, inline styles, HTML elements, and JavaScript API usage
+## 🔍 How It Works
 
--📊 Visual Dashboard - Color-coded overlay showing compatibility status
+Baseline Radar operates by performing a real-time static analysis of the webpage currently in your view:
 
--📈 Statistics Panel - Pie chart breakdown of feature support levels
+1.  **Data Synchronization**: The extension downloads and caches the latest `web-features` dataset from the Web Platform DX project. This ensures you are checking against the most current browser compatibility data.
+2.  **Content Extraction**:
+    -   **HTML**: It traverses the DOM to identify all active HTML tags and attributes.
+    -   **CSS**: It scans both inline styles and attached stylesheets (handling CORS where possible) to parse used CSS properties and values.
+    -   **JavaScript**: It analyzes script content to detect usage of modern APIs (like `IntersectionObserver`, `fetch`, etc.) based on keyword matching logic.
+3.  **Validation & Matching**: Extracted features are cross-referenced with the local Baseline database. Each match is then tagged with its specific availability status (Widely, Newly, Limited).
+4.  **Reporting**: Final results are aggregated and presented in the popup interface, complete with support matrices for each browser.
 
--💡 Smart Suggestions - Get fallback recommendations for risky features
+## 🛠️ Installation
 
--📤 Export Reports - Generate HTML/Markdown compatibility reports
+Since this is a developer tool, you can install it directly from the source code:
 
--⚡ Zero Configuration - Works instantly on any webpage
+1.  **Clone the Repository**:
+    ```bash
+    git clone https://github.com/joellobo1234/baseline-radar.git
+    ```
+2.  **Open Chrome Extensions**:
+    -   Navigate to `chrome://extensions/` in your browser.
+    -   Enable **Developer mode** (toggle in the top-right corner).
+3.  **Load Unpacked**:
+    -   Click the **Load unpacked** button.
+    -   Select the folder where you cloned this repository (the folder containing `manifest.json`).
+4.  **Ready to Radar**: The Baseline Radar icon will appear in your toolbar.
 
-##🚀 Installation
-Load as Unpacked Extension
+## 📖 Usage
 
--Download or Clone this repository:
+1.  Navigate to any website you want to inspect.
+2.  Click the **Baseline Radar** icon in the toolbar.
+3.  Click **"Analyze Current Page"**.
+4.  Review the report! You can filter by "CSS", "JS", or "HTML" to narrow down the results.
 
-git clone https://github.com/Oomszz/Baseline-Inspector-Browser-Extension.git
+## 🤝 Contributing
 
--Open Chrome Extensions Page:
+Contributions are welcome! If you have ideas for better feature detection logic or UI improvements, please feel free to open an issue or submit a pull request.
 
-Navigate to chrome://extensions/
+## 📄 License
 
-Or click Menu → More Tools → Extensions
+This project is open-source and available under the [MIT License](LICENSE).
 
--Enable Developer Mode:
-
-Toggle the "Developer mode" switch in the top-right corner
-
--Load the Extension:
-
-Click "Load unpacked"
-
-Select the Baseline-Inspector-Browser-Extension folder
-
--The extension icon should appear in your toolbar!
-
-##📖 Usage
-Quick Start (3 Steps)
-
--Click the Baseline Inspector icon in your Chrome toolbar
-
--Analyze - Click "Inspect Current Page" button
-
--View Results - See the overlay with feature compatibility
-
-##Detailed Workflow
-
--Step 1: Open Any Webpage
-
-Navigate to any website you want to analyze (try the included demo.html for testing).
-
--Step 2: Launch Inspector
-
-Click the extension icon and hit "Inspect Current Page".
-
--Step 3: Review the Overlay
-
--🟢 Green Badges = Widely Available (safe to use)
-
--🟡 Yellow Badges = Newly Available (use with caution)
-
--🔴 Red Badges = Limited Support (needs fallbacks)
-
--Step 4: View Statistics
-
-Check the popup for:
-
-Pie chart breakdown of feature distribution
-
-Total feature count
-
-Risk assessment
-
--Step 5: Export Report
-
-Click "Export Report" to download:
-
-JSON/HTML report with full details
-
-Markdown summary for documentation
-
-##📸 Screenshots
---Extension Popup:- Clean, modern interface with instant analysis ![POPUP](screenshoot/popup.png) 
-
-
-
---Overlay on Demo Page :- Real-time CSS, HTML, and JS feature detection with color-coded badges ![Overlay](screenshoot/overlay.png)
-
-
-
---Statistics Dashboard :- Visual breakdown of baseline compatibility ![STATS](screenshoot/stats.png)
-
-
-
-##🛠️ Technical Details
-Built With
-
-Vanilla JavaScript - No frameworks, pure performance
-
-Chrome Extension Manifest V3 - Latest extension API
-
-Tailwind CSS - Modern, responsive UI
-
-Chart.js - Beautiful data visualization
-
-Web Features API - Official Baseline data
-
-##Project Structure
-baseline-inspector/
-├── manifest.json # Extension configuration
-├── popup.html # Extension popup UI
-├── popup.js # Popup logic
-├── content.js # Page analysis script (CSS, HTML & JS)
-├── background.js # Service worker
-├── styles.css # Custom styles
-├── demo.html # Test page
-└── icons/ # Extension icons
-
-##🎨 Demo Page
-
-Test the extension on the included demo.html:
-
-- Open demo.html in Chrome
-
-- Click extension icon
-
-- See instant analysis!
-
-The demo showcases:
-
-CSS Grid & Flexbox (Widely Available)
-
-CSS Custom Properties (Widely Available)
-
-Container Queries & :has() Selector (Newly Available)
-
-Backdrop Filter & color-mix() (Limited Support)
-
-HTML5 semantic elements detection
-
-JS API usage detection (e.g., fetch, localStorage, Web Animations)
-
-##🌟 Why Baseline Inspector?
-Problem It Solves
-
-Developers waste hours debugging cross-browser issues. Baseline Inspector prevents these issues before they happen by:
-
-Identifying risky CSS, HTML, and JS features during development
-
-Providing instant compatibility feedback
-
-Suggesting safer alternatives
-
-Unique Differentiators
-
-Visual Overlay - See compatibility inline, not in console
-
-Multi-Layer Analysis - CSS, HTML, and JS checked together
-
-Statistics Dashboard - Quick risk assessment at a glance
-
-Smart Suggestions - Get fallback recommendations
-
-Export Reports - Share findings with your team
-
-##🤝 Contributing
-
-Contributions are welcome! This is an open-source hackathon project.
-
-Fork the repository
-
-Create your feature branch (git checkout -b feature/AmazingFeature)
-
-Commit your changes (git commit -m 'Add some AmazingFeature')
-
-Push to the branch (git push origin feature/AmazingFeature)
-
-Open a Pull Request
-
-##📄 License
-
-This project is licensed under the MIT License - see the LICENSE
-file for details.
-
-##🙏 Acknowledgments
-
-Web Platform DX Community - For the Baseline standard
-
-MDN Web Docs - For feature compatibility data
-
-Chrome Extensions Team - For the robust platform
-
-##📬 Contact
-
--Created by: **Omkar.V.Kottalwar**
--Project Link: https://github.com/Oomszz/Baseline-Inspector-Browser-Extension
--LinkeDIn :- linkedin.com/in/omkar-kottalwar
-
-⭐ Star this repo if you find it useful!
-🐛 Report issues to help improve the extension
-💡 Suggest features for future versions
-
-##🗺️ Roadmap
-
-Firefox & Edge support
-
-Advanced JS API detection
-
-Team collaboration features
-
-CI/CD integration
-
-Custom rule configuration
-
-Built with ❤️ for the web development community by **Omkar.V.Kottalwar**
-
+---
+*Powered by [web-features](https://github.com/web-platform-dx/web-features) data.*

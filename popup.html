@@ -1,47 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Baseline Inspector</title>
   <link rel="stylesheet" href="popup.css">
 </head>
+
 <body class="popup-body">
   <div class="popup-container">
     <!-- Header -->
     <div class="header">
       <div class="header-content">
         <div class="logo-section">
-          <div class="logo">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <h1 class="title">Baseline Inspector</h1>
+          <img src="icons/baseline-wordmark.svg" alt="Baseline" class="logo-img">
         </div>
         <div class="header-controls">
-          <!-- On/Off Toggle -->
-          <div class="toggle-container">
-            <label class="toggle-switch">
-              <input type="checkbox" id="extensionToggle" checked>
-              <span class="toggle-slider"></span>
-            </label>
-          </div>
-          <button id="settingsBtn" class="settings-btn">
+          <!-- Sync Button -->
+          <button id="syncBtn" class="icon-btn" title="Sync Baseline Data">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="3"></circle>
-              <path d="m12 1 1.27 2.22.69.13 2.22-1.27.13.69L14.78 5l.13.69 2.22 1.27-.13.69L15 9.22l-.13.69 1.27 2.22-.69.13L13.22 15l-.69.13-1.27 2.22-.69-.13L9 14.78l-.69-.13-2.22 1.27-.13-.69L9 13.22l-.13-.69-1.27-2.22.69-.13L10.78 9l.69-.13L10.2 6.65l.69-.13L12 4.3z"></path>
+              <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.3" />
+            </svg>
+          </button>
+
+          <!-- Dashboard Button -->
+          <button id="dashboardBtn" class="icon-btn" title="Open Analysis History">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
             </svg>
           </button>
         </div>
-      </div>
-    </div>
-
-    <!-- Status Bar -->
-    <div class="status-bar">
-      <div class="status-indicator">
-        <div class="status-dot status-enabled" id="statusDot"></div>
-        <span id="statusText">Extension Enabled</span>
       </div>
     </div>
 
@@ -53,7 +45,7 @@
         <button class="filter-btn" data-filter="js">JavaScript</button>
         <button class="filter-btn" data-filter="html">HTML</button>
       </div>
-      
+
       <div class="stats-row">
         <div class="stat-item">
           <div class="stat-dot widely"></div>
@@ -70,14 +62,13 @@
           <span class="stat-label">Limited</span>
           <span id="limitedCount" class="stat-count">0</span>
         </div>
-        
-        <button id="exportBtn" class="export-btn">
+
+        <button id="exportBtn" class="export-btn" title="Export Report">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="7,10 12,15 17,10"></polyline>
             <line x1="12" y1="15" x2="12" y2="3"></line>
           </svg>
-          Export
         </button>
       </div>
     </div>
@@ -87,12 +78,14 @@
       <div id="featureList" class="feature-list">
         <!-- Features will be populated by JavaScript -->
       </div>
-      
+
       <!-- Empty State -->
       <div id="emptyState" class="empty-state">
         <div class="empty-icon">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+            <path
+              d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2">
+            </path>
           </svg>
         </div>
         <h3 class="empty-title">No features detected</h3>
@@ -114,4 +107,5 @@
 
   <script src="popup.js"></script>
 </body>
+
 </html>

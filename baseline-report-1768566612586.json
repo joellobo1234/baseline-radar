@@ -1,0 +1,558 @@
+{
+  "url": "Current page",
+  "timestamp": "2026-01-16T12:30:12.581Z",
+  "summary": {
+    "total": 39,
+    "widely": 37,
+    "newly": 1,
+    "limited": 1
+  },
+  "features": [
+    {
+      "id": "html-html",
+      "name": "<html> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML html element",
+      "element": "html",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-head",
+      "name": "<head> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML head element",
+      "element": "head",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-meta",
+      "name": "<meta> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML meta element",
+      "element": "meta",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-title",
+      "name": "<title> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML title element",
+      "element": "title",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-link",
+      "name": "<link> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML link element",
+      "element": "link",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-script",
+      "name": "<script> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML script element",
+      "element": "script",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-noscript",
+      "name": "<noscript> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML noscript element",
+      "element": "noscript",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-style",
+      "name": "<style> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML style element",
+      "element": "style",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-body",
+      "name": "<body> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML body element",
+      "element": "body",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-div",
+      "name": "<div> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML div element",
+      "element": "div",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-a",
+      "name": "<a> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML a element",
+      "element": "a",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-span",
+      "name": "<span> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML span element",
+      "element": "span",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-iframe",
+      "name": "<iframe> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML iframe element",
+      "element": "iframe",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-header",
+      "name": "<header> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML header element",
+      "element": "header",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-button",
+      "name": "<button> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML button element",
+      "element": "button",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-svg",
+      "name": "<svg> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML svg element",
+      "element": "svg",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-path",
+      "name": "<path> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML path element",
+      "element": "path",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-nav",
+      "name": "<nav> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML nav element",
+      "element": "nav",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-section",
+      "name": "<section> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML section element",
+      "element": "section",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-ul",
+      "name": "<ul> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML ul element",
+      "element": "ul",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-li",
+      "name": "<li> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML li element",
+      "element": "li",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-input",
+      "name": "<input> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML input element",
+      "element": "input",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-main",
+      "name": "<main> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML main element",
+      "element": "main",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-article",
+      "name": "<article> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML article element",
+      "element": "article",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-img",
+      "name": "<img> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML img element",
+      "element": "img",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-h2",
+      "name": "<h2> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML h2 element",
+      "element": "h2",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-p",
+      "name": "<p> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML p element",
+      "element": "p",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-hr",
+      "name": "<hr> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML hr element",
+      "element": "hr",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-h1",
+      "name": "<h1> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML h1 element",
+      "element": "h1",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-footer",
+      "name": "<footer> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML footer element",
+      "element": "footer",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-h3",
+      "name": "<h3> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML h3 element",
+      "element": "h3",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-h4",
+      "name": "<h4> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML h4 element",
+      "element": "h4",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-b",
+      "name": "<b> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML b element",
+      "element": "b",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "html-next-route-announcer",
+      "name": "<next-route-announcer> element",
+      "status": "widely",
+      "group": "html",
+      "description": "HTML next-route-announcer element",
+      "element": "next-route-announcer",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "fetch-api",
+      "name": "Fetch API",
+      "status": "widely",
+      "group": "js",
+      "description": "Fetch API feature detected in script",
+      "element": "script",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "promises",
+      "name": "Promises",
+      "status": "widely",
+      "group": "js",
+      "description": "Promises feature detected in script",
+      "element": "script",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "async/await",
+      "name": "Async/Await",
+      "status": "newly",
+      "group": "js",
+      "description": "Async/Await feature detected in script",
+      "element": "script",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "websockets",
+      "name": "WebSockets",
+      "status": "widely",
+      "group": "js",
+      "description": "WebSockets feature detected in script",
+      "element": "script",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    },
+    {
+      "id": "bigint",
+      "name": "BigInt",
+      "status": "limited",
+      "group": "js",
+      "description": "BigInt feature detected in script",
+      "element": "script",
+      "browserSupport": {
+        "chrome": true,
+        "firefox": true,
+        "safari": true,
+        "edge": true
+      }
+    }
+  ]
+}
